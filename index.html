@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="pauseBtn" id="pauseBtn" onclick="playPause()">
+                <i class="fa fa-pause-circle"></i>
+            </div>
+            <h1>AC MILAN <br> CHAMPIONS</h1>
+            <div class="player">
+                <audio src="desire.mp3" type="audio/mp3" id="audio"></audio>
+                <div class="player-wrapper">
+                    <div class="player1">
+                        <div class="pauseAudio" id="pauseAudio" onclick="playPauseAudio()">
+                            <i class="fas fa-play-circle" style="font-size: 30px;"></i>
+                        </div>
+                        <div class="muteAudio" id="muteAudio" onclick="muteAudio()">
+                            <i class='fas fa-volume-up' style="font-size: 30px"></i>
+                        </div>
+                    </div>
+                    <div id="defultBar">
+                        <div id="progressBar"></div>
+                    </div>
+                    <div style="margin: auto 0;">
+                        <span id="currentTime">0:00</span>
+                        /<span id="fullTime">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video id="videoMilan" autoplay loop muted>
+                <source src="milan.MP4">
+            </video>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
